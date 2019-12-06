@@ -1,6 +1,6 @@
   GNU nano 2.0.6                                            File: .gitignore                                                                                      Modified  
 
-
+.idea/
 .DS_Store
 __pycache__/
 *.pyc
