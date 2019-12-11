@@ -8,7 +8,7 @@ def number():
     form = DataForm()
     if form.validate_on_submit():
         my_list = {1: {'mytsko', 'baran', 'budzhak', 'motso'}, 2: {'smilka', 'soltys'}}
-        searching_last_name = form.data['last_name']
+        searching_last_name = str(form.data['last_name']).lower()
         for table, peoples in my_list.items():
             if searching_last_name in peoples:
                 our_table = table
