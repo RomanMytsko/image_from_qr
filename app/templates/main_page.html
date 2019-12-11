@@ -1,0 +1,14 @@
+<html>
+<h1>Lets try something!)</h1>
+    <form action="" method="post" novalidate>
+        {{ form.hidden_tag() }}
+        <p>{{ form.last_name.label }}<br>
+            {{ form.last_name(size=26) }}
+            {% for error in form.last_name.errors %}
+                <span style="color: red;">[{{ error }}]</span>
+            {% endfor %}
+        </p>
+    <p>{{ form.search() }}</p>
+    </form>
+
+</html>
