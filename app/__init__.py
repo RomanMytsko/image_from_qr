@@ -1,9 +1,13 @@
 from flask import Flask
-from config import Config
-
+import os
 
 app = Flask(__name__)
-app.config.from_object(Config)
 
+
+class Config(object):
+    SECRET_KEY = os.environ.get('SECRET_KEY') or 'you-will-never-guess'
+
+
+app.config.from_object(Config)
 
 from app import routes
