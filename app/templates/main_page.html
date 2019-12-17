@@ -1,6 +1,7 @@
-<html>
-<h3>Please enter your last name
-    and see what is your's table!)</h3>
+{% extends "base.html" %}
+
+{% block content %}
+<h3>Here you can search number of your table </h3>
     <form action="" method="post" novalidate>
         {{ form.hidden_tag() }}
         <p>{{ form.last_name.label }}<br>
@@ -11,6 +12,8 @@
         </p>
     <p>{{ form.search() }}</p>
     </form>
-<img src="/static/scalr.jpg" alt="Girl in a jacket" width="700" height="600">
 
-</html>
+
+{% endblock %}
+
+
