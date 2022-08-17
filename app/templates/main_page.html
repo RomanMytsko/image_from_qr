@@ -1,0 +1,19 @@
+{% extends "base.html" %}
+
+{% block content %}
+<h3>Here you can search number of your table </h3>
+    <form action="" method="post" novalidate>
+        {{ form.hidden_tag() }}
+        <p>{{ form.last_name.label }}<br>
+            {{ form.last_name(size=26) }}
+            {% for error in form.last_name.errors %}
+                <span style="color: red;">[{{ error }}]</span>
+            {% endfor %}
+        </p>
+    <p>{{ form.search() }}</p>
+    </form>
+
+
+{% endblock %}
+
+
